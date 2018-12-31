@@ -45,7 +45,7 @@ class postsController {
     const post = Posts.find(updatePost => updatePost.id == id);
     if (post) {
       (post.title = req.body.title), (post.body = req.body.body);
-      return res.status(200).json({
+      return res.status(201).json({
         message: "successfully updated",
         updatePost: post
       });
